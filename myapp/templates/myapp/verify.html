@@ -1,0 +1,10 @@
+<html>
+    <body>
+        <h1>OTP validation</h1>
+    <form method="POST" action="http://localhost:8000/verify">
+        {% csrf_token %}
+<input type="text" name="otp"/>
+<input type="submit" name="verify"/>
+</body>
+</form>
+</html>

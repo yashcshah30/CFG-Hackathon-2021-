@@ -1,0 +1,10 @@
+<html>
+    <body>
+        <h1>Login</h1>
+        <form name="login" method="POST" action="http://localhost:8000/getsms" >
+            {% csrf_token %}
+        <input type="text" name="phone"/>
+       <input type="submit" name="verify"/>
+        </form>
+    </body>
+</html>

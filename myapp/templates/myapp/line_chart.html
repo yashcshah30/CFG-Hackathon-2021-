@@ -1,0 +1,66 @@
+{% load static %}
+<html>
+    <head>
+        <title>5I</title>
+        <!--[if lte IE 8]>
+            <script src="{% static 'js/excanvas.js' %}"></script>
+        <![endif]-->
+        <link href="{% static 'css/styles.css' %}" rel="stylesheet" />
+        <style>
+            .con{
+                width: 40%;
+                height: 10px;
+            }
+            .box{
+                border: 2px solid rgb(55, 181, 219);
+                width: 70%;
+                text-align: center;
+                padding-left: 20px;
+            }
+        </style>
+    </head>
+    <body>
+    <br>
+    <br>
+    <br>
+    <br>
+    <br>
+        <nav class="navbar navbar-expand-lg bg-secondary text-uppercase fixed-top" id="mainNav">
+            <div class="container">
+                <a class="navbar-brand" href="#page-top">Janaagraha</a>
+                <button class="navbar-toggler text-uppercase font-weight-bold bg-primary text-white rounded" type="button" data-bs-toggle="collapse" data-bs-target="#navbarResponsive" aria-controls="navbarResponsive" aria-expanded="false" aria-label="Toggle navigation">
+                    Menu
+                    <i class="fas fa-bars"></i>
+                </button>
+                <div class="collapse navbar-collapse" id="navbarResponsive">
+                    <ul class="navbar-nav ms-auto">
+                        <li class="nav-item mx-0 mx-lg-1"><a class="nav-link py-3 px-0 px-lg-3 rounded" href="#index">Home</a></li>
+                        <li class="nav-item mx-0 mx-lg-1"><a class="nav-link py-3 px-0 px-lg-3 rounded" href="#login">Login/ Register</a></li>
+                        <li class="nav-item mx-0 mx-lg-1"><a class="nav-link py-3 px-0 px-lg-3 rounded" href="#testimonial">Testimonial</a></li>
+                        <li class="nav-item mx-0 mx-lg-1"><a class="nav-link py-3 px-0 px-lg-3 rounded" href="http://localhost:8000/display_reps">Reports</a></li>
+                        <li class="nav-item mx-0 mx-lg-1"><a class="nav-link py-3 px-0 px-lg-3 rounded" href="#about">About Us!</a></li>
+                    </ul>
+                </div>
+            </div>
+        </nav>
+<centre>
+<div class="con">
+        <canvas id="myChart" width="50" height="50"></canvas>
+        <div class="box">
+        <h3>x-axis: 5I stages <br> y-axis: Score at different stages</h3>
+    </div>
+</centre>
+
+        <script type="text/javascript" src="http://code.jquery.com/jquery-1.10.0.min.js"></script>
+        <script type="text/javascript" src="{% static 'js/Chart.min.js' %}"></script>
+        <script type="text/javascript">
+            $.get('{% url "line_chart_json" %}', function(data) {
+                var ctx = $("#myChart").get(0).getContext("2d");
+                new Chart(ctx, {
+                    type: 'line', data: data
+                });
+            });
+        </script>
+        </div>
+    </body>
+</html>

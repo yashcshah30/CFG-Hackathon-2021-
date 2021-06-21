@@ -1,0 +1,40 @@
+
+.phase{
+    color: black;
+    padding: 10px;
+    width: 90%;
+    text-align: center ;
+  }
+
+  /* #one{
+      background-color: rgb(202, 53, 53);
+      width:100%;
+      padding:10px;
+  }
+  #two{
+    background-color: rgb(42, 173, 112);
+    width:100%;
+    padding:10px;
+}
+#three{
+    background-color: rgb(205, 231, 89);
+    width:100%;
+    padding:10px;
+}
+#four{
+    background-color: rgb(110, 21, 161);
+    width:100%;
+    padding:10px;
+}
+#five{
+    background-color: rgb(59, 26, 179);
+    width:100%;
+    padding:10px;
+} */
+.one{
+    resize: both;
+    overflow: auto;
+    border: 2px solid;
+    padding: 20px; 
+    width: 300px;
+}

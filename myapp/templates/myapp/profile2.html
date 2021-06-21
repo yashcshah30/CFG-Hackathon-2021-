@@ -1,0 +1,159 @@
+{% load static %}
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="utf-8" />
+        <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no" />
+        <meta name="description" content="" />
+        <meta name="author" content="" />
+        <title>Code afor good</title>
+        <!-- Favicon-->
+        <link rel="icon" type="image/x-icon" href="assets/favicon.ico" />
+        <!-- Font Awesome icons (free version)-->
+        <script src="https://use.fontawesome.com/releases/v5.15.3/js/all.js" crossorigin="anonymous"></script>
+        <!-- Google fonts-->
+        <link href="https://fonts.googleapis.com/css?family=Montserrat:400,700" rel="stylesheet" type="text/css" />
+        <link href="https://fonts.googleapis.com/css?family=Lato:400,700,400italic,700italic" rel="stylesheet" type="text/css" />
+        <!-- Core theme CSS (includes Bootstrap)-->
+        <link href="{% static 'css/styles.css' %}" rel="stylesheet" />
+    </head>
+    <body id="page-top">
+        <!-- Navigation-->
+        <nav class="navbar navbar-expand-lg bg-secondary text-uppercase fixed-top" id="mainNav">
+            <div class="container">
+                <a class="navbar-brand" href="#page-top">Janaagraha</a>
+                <button class="navbar-toggler text-uppercase font-weight-bold bg-primary text-white rounded" type="button" data-bs-toggle="collapse" data-bs-target="#navbarResponsive" aria-controls="navbarResponsive" aria-expanded="false" aria-label="Toggle navigation">
+                    Menu
+                    <i class="fas fa-bars"></i>
+                </button>
+                <div class="collapse navbar-collapse" id="navbarResponsive">
+                    <ul class="navbar-nav ms-auto">
+                        <li class="nav-item mx-0 mx-lg-1"><a class="nav-link py-3 px-0 px-lg-3 rounded" href="{% url 'login' %}">Home</a></li>
+                        <li class="nav-item mx-0 mx-lg-1"><a class="nav-link py-3 px-0 px-lg-3 rounded" href="{% url 'update_team_profile' %}">Profile</a></li>
+                        <li class="nav-item mx-0 mx-lg-1"><a class="nav-link py-3 px-0 px-lg-3 rounded" href="{% url 'phase' %}">Module</a></li>
+                        <li class="nav-item mx-0 mx-lg-1"><a class="nav-link py-3 px-0 px-lg-3 rounded" href="{% url 'comment' %}">Forum</a></li>
+                        {% comment %} <li class="nav-item mx-0 mx-lg-1"><a class="nav-link py-3 px-0 px-lg-3 rounded" href="reports.html">Reports</a></li> {% endcomment %}
+                    </ul>
+                </div>
+            </div>
+        </nav>
+x   
+
+
+
+        <!-- Masthead-->
+        <header class="masthead bg-primary text-white text-center" id="index">
+            <div class="container d-flex align-items-center flex-column">
+                <div class="col-lg-8 col-xl-7" id="for_column">
+                                
+
+
+
+                    <form id="contactForm" method="post" action = "register_students"><!--data-sb-form-api-token="API_TOKEN"-->
+                        <h1>Teams Registration!</h1>                                            
+                        
+                        <!-- Email address input-->
+                        <div class="form-floating mb-3">
+                            <input class="form-control" id="username" placeholder="Enter Username" name='username'> <!--type="email" placeholder="name@example.com" data-sb-validations="required,email" /-->
+                            <label for="username">TeamName</label>
+                            <!--div class="invalid-feedback" data-sb-feedback="email:required">An email is required.</div>
+                            <div class="invalid-feedback" data-sb-feedback="email:email">Email is not valid.</div-->
+                        </div>
+                        <div class="form-floating mb-3">
+                            <input class="form-control" id="email" placeholder="Enter email" name='email'> <!--type="email" placeholder="name@example.com" data-sb-validations="required,email" /-->
+                            <label for="email">Email</label>
+                            <!--div class="invalid-feedback" data-sb-feedback="email:required">An email is required.</div>
+                            <div class="invalid-feedback" data-sb-feedback="email:email">Email is not valid.</div-->
+                        </div>
+
+                        <div class="form-floating mb-3">
+                            <input class="form-control" id="phone_number" placeholder="Enter Phone number" name='phone_number'> <!--type="email" placeholder="name@example.com" data-sb-validations="required,email" /-->
+                            <label for="phone_number">Phone number</label>
+                            <!--div class="invalid-feedback" data-sb-feedback="email:required">An email is required.</div>
+                            <div class="invalid-feedback" data-sb-feedback="email:email">Email is not valid.</div-->
+                        </div>
+
+                        <div class="form-floating mb-3">
+                            <input class="form-control" id="pass1" placeholder="Enter password" name='password1' type="password"> <!--type="email" placeholder="name@example.com" data-sb-validations="required,email" /-->
+                            <label for="pass1">Password</label>
+                            <!--div class="invalid-feedback" data-sb-feedback="email:required">An email is required.</div>
+                            <div class="invalid-feedback" data-sb-feedback="email:email">Email is not valid.</div-->
+                        </div>
+
+                        <div class="form-floating mb-3">
+                            <input class="form-control" id="pass2" placeholder="Confirm password" name='password2' type="password"> <!--type="email" placeholder="name@example.com" data-sb-validations="required,email" /-->
+                            <label for="pass2">Confirm Password</label>
+                            <!--div class="invalid-feedback" data-sb-feedback="email:required">An email is required.</div>
+                            <div class="invalid-feedback" data-sb-feedback="email:email">Email is not valid.</div-->
+                        </div>
+
+
+                        <div class="form-floating mb-3">
+                            <input class="form-control" id="numofmembers" placeholder="Number of Members" name='number_of_members' type="text"> <!--type="email" placeholder="name@example.com" data-sb-validations="required,email" /-->
+                            <label for="numofmembers">Number of Members</label>
+                            <!--div class="invalid-feedback" data-sb-feedback="email:required">An email is required.</div>
+                            <div class="invalid-feedback" data-sb-feedback="email:email">Email is not valid.</div-->
+                        </div>
+
+                        <div class="form-floating mb-3">
+                            <input class="form-control" id="member1" placeholder="Member 1" name='member1' type="text"> <!--type="email" placeholder="name@example.com" data-sb-validations="required,email" /-->
+                            <label for="member1">Name of Member 1</label>
+                            <!--div class="invalid-feedback" data-sb-feedback="email:required">An email is required.</div>
+                            <div class="invalid-feedback" data-sb-feedback="email:email">Email is not valid.</div-->
+                        </div>
+
+                        <div class="form-floating mb-3">
+                            <input class="form-control" id="member2" placeholder="Member 2" name='member2' type="text"> <!--type="email" placeholder="name@example.com" data-sb-validations="required,email" /-->
+                            <label for="member2">Name of Member 2</label>
+                            <!--div class="invalid-feedback" data-sb-feedback="email:required">An email is required.</div>
+                            <div class="invalid-feedback" data-sb-feedback="email:email">Email is not valid.</div-->
+                        </div>
+
+                        <div class="form-floating mb-3">
+                            <input class="form-control" id="member3" placeholder="Member 3" name='member3' type="text"> <!--type="email" placeholder="name@example.com" data-sb-validations="required,email" /-->
+                            <label for="member3">Name of Member 3</label>
+                            <!--div class="invalid-feedback" data-sb-feedback="email:required">An email is required.</div>
+                            <div class="invalid-feedback" data-sb-feedback="email:email">Email is not valid.</div-->
+                        </div>
+
+                        <div class="form-floating mb-3">
+                            <input class="form-control" id="member4" placeholder="Member 4" name='member4' type="text"> <!--type="email" placeholder="name@example.com" data-sb-validations="required,email" /-->
+                            <label for="member4">Name of Member 4</label>
+                            <!--div class="invalid-feedback" data-sb-feedback="email:required">An email is required.</div>
+                            <div class="invalid-feedback" data-sb-feedback="email:email">Email is not valid.</div-->
+                        </div>
+
+                        <div class="form-floating mb-3">
+                            <input class="form-control" id="member5" placeholder="Member 5" name='member5' type="text"> <!--type="email" placeholder="name@example.com" data-sb-validations="required,email" /-->
+                            <label for="member5">Name of Member 5</label>
+                            <!--div class="invalid-feedback" data-sb-feedback="email:required">An email is required.</div>
+                            <div class="invalid-feedback" data-sb-feedback="email:email">Email is not valid.</div-->
+                        </div>
+
+
+
+
+
+
+                        <!-- Submit success message-->
+                        <div class="d-none" id="submitSuccessMessage">
+                            <div class="text-center mb-3">
+                                <div class="fw-bolder">Form submission successful!</div>
+                                To activate this form, sign up at
+                                <br />
+                                <a href="https://startbootstrap.com/solution/contact-forms">https://startbootstrap.com/solution/contact-forms</a>
+                            </div>
+                        </div>
+                        <!-- Submit error message-->
+                        <div class="d-none" id="submitErrorMessage"><div class="text-center text-danger mb-3">Error sending message!</div></div>
+                        <!-- Submit Button-->
+                        <button class="btn btn-primary btn-xl disabled" id="submitButton" type="submit">Submit</button>
+                    </form>
+                </div>
+                
+                </div>  
+        </header>
+
+
+
+</html>
